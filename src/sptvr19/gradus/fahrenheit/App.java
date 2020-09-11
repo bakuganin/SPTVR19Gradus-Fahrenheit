@@ -20,9 +20,10 @@ class App {
         double k = 273.15;
         double b = 1.8;
         double z;
+        double p = 459.67;
         System.out.println("Конвентер градусов Цельсия в градусы по Фаренгейту или наоборот.");
         scanner.nextLine();
-        System.out.println("Выберите: (1)-Цельсия в фаренгейт (2) - Цельсия в фаренгейт (3) - Цельсия в кельвин (4) - Кельвин в Цельсия: ");
+        System.out.println("Выберите: (1)-Цельсия в фаренгейт (2) - Цельсия в фаренгейт (3) - Цельсия в кельвин (4) - Кельвин в Цельсия (5) - Кельвин в фаренгейт: ");
         String znak = scanner.nextLine();
         if(null != znak) switch (znak) {
             case "1":
@@ -46,6 +47,11 @@ class App {
                 double gradK1 = scanner.nextDouble();
                 z = gradK1 - k;
                 System.out.println("По цельсия:" + z);
+            case "5":
+                System.out.println("Введите градусы по Кельвина: ");
+                double gradK2 = scanner.nextDouble();
+                z = gradK2 * b - p;
+                System.out.println("По фаренгейту:" + z);
 
                 
                 
